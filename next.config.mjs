@@ -1,10 +1,6 @@
-import path from "path";
+import path from 'path';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    swcPlugins: [["@onlook/nextjs", {
-      root: path.resolve(".")
-    }]]
-  }
+    output: 'standalone',
 };
 export default nextConfig;
