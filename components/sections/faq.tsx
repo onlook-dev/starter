@@ -1,11 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -70,23 +65,51 @@ export const FAQ = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <Accordion type="single" collapsible>
-            {faqs.map((faq, index) => (
-              <motion.div key={index} variants={item}>
-                <AccordionItem value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </motion.div>
-            ))}
-          </Accordion>
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} faq={faq} variants={item} />
+          ))}
         </motion.div>
       </div>
     </section>
+  );
+};
+
+const FAQItem = ({ faq, variants }: { faq: { question: string; answer: string }; variants: any }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <motion.div
+      variants={variants}
+      className="border-b border-gray-200"
+    >
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full py-4 flex items-center justify-between text-left font-medium hover:text-purple-600 transition-colors"
+      >
+        {faq.question}
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <ChevronDown className="h-4 w-4 flex-shrink-0" />
+        </motion.div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-4 text-gray-600">
+              {faq.answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
