@@ -13,26 +13,26 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-5xl mx-auto text-center"
+              className="max-w-2xl"
             >
-              <h1 className="text-7xl md:text-8xl lg:text-9xl 2xl:text-9xl font-bold text-white mb-10 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Your AI-Powered<br />
                 <span className="bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">Design</span> Assistant
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-400 mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-neutral-400 mb-8 max-w-xl">
                 Unlock your creative potential. Seamlessly generate, customize, and perfect your designs with cutting-edge AI technology.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Button
                   size="lg"
-                  className="bg-purple-500 text-white hover:bg-purple-600 transition-colors w-full sm:w-auto text-lg py-6 px-8 rounded-xl"
+                  className="bg-white text-black hover:bg-white/90 transition-colors w-full sm:w-auto text-lg py-6 px-8 rounded-xl"
                 >
                   Get Started
                 </Button>
                 <Button
                   size="lg"
                   variant="ghost"
-                  className="text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-lg py-6 px-8 rounded-xl"
+                  className="text-white border-white/20 hover:bg-white/10 transition-colors w-full sm:w-auto text-lg py-6 px-8 rounded-xl"
                 >
                   More Templates
                 </Button>

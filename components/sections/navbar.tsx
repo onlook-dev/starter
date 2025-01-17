@@ -34,16 +34,16 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-purple-600 transition-colors">
+            <a href="#features" className="text-white/80 hover:text-white transition-colors">
               Features
             </a>
-            <a href="#pricing" className="text-gray-600 hover:text-purple-600 transition-colors">
+            <a href="#pricing" className="text-white/80 hover:text-white transition-colors">
               Pricing
             </a>
-            <a href="#blog" className="text-gray-600 hover:text-purple-600 transition-colors">
+            <a href="#blog" className="text-white/80 hover:text-white transition-colors">
               Blog
             </a>
-            <Button variant="outline">More Templates</Button>
+            <Button variant="outline" className="text-white border-white/20 hover:bg-white/10">More Templates</Button>
           </div>
 
           {/* Mobile Menu Button */}
