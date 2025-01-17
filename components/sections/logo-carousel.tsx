@@ -20,7 +20,7 @@ const duplicatedLogos = [...logos, ...logos];
 
 export const LogoCarousel = () => {
   return (
-    <div className="w-full bg-black py-20">
+    <div className="w-full bg-black py-28">
       <div className="max-w-7xl mx-auto px-4 overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}

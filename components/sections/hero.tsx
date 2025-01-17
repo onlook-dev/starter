@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black py-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="relative bg-neutral-900 rounded-3xl overflow-hidden aspect-video flex items-center">
+        <div className="relative bg-black rounded-3xl overflow-hidden aspect-[21/9] flex items-center">
           {/* Content */}
           <div className="relative z-10 w-full py-16 md:py-24 px-8 md:px-16">
             <motion.div
@@ -59,9 +59,9 @@ export const Hero = () => {
               }
             }}
           >
-            <div>
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-full opacity-70 blur-3xl transform -translate-x-1/3 scale-125" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-purple-800 rounded-full opacity-50 blur-3xl transform translate-x-1/4 -translate-y-1/4 scale-110" />
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-full opacity-70 blur-3xl -translate-x-full scale-150" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-purple-800 rounded-full opacity-50 blur-3xl translate-x-1/2 -translate-y-1/2" />
             </div></motion.div>
         </div>
       </div>
