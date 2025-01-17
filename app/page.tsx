@@ -3,6 +3,7 @@
 import Hero from "@/components/sections/hero";
 import Features from "@/components/sections/features";
 import Pricing from "@/components/sections/pricing";
+import FAQ from "@/components/sections/faq";
 import CTA from "@/components/sections/cta";
 
 export default function Page() {
@@ -11,6 +12,7 @@ export default function Page() {
             <Hero />
             <Features />
             <Pricing />
+            <FAQ />
             <CTA />
         </main>
     );
